@@ -27,7 +27,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="../index.jsp">Inicio</a>
                                 <a class="nav-link" aria-current="page" href="formulario-productos.jsp">Formulario Producto</a>
-                                <a class="nav-link active" href=".././lista-productos/lista-productos.jsp">Lista Productos</a>
+                                <a class="nav-link active" href="../producto-servlet">Lista Productos</a>
                             </li>
                         </ul>
                     </div>

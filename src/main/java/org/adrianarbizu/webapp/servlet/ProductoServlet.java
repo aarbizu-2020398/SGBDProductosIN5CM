@@ -9,14 +9,26 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.adrianarbizu.webapp.model.Producto;
+import org.adrianarbizu.webapp.service.ProductoService;
 
 @WebServlet("/producto-servlet")
 @MultipartConfig
 public class ProductoServlet extends HttpServlet {
-
+    
+    private ProductoService ps;
+    
+    @Override
+    public void init() throws ServletException{
+        super.init();
+        this.ps = new ProductoService();
+    }
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // Manejo del método GET, si es necesario
+        List<Producto> productos = ps.listarProducto();
+        req.setAttribute("productos",productos);
+        req.getRequestDispatcher("/lista-productos/lista-productos.jsp").forward(req,resp);
     }
 
     @Override

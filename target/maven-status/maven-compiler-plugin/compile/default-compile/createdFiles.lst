@@ -1,1 +1,6 @@
 org\adrianarbizu\webapp\servlet\ProductoServlet.class
+org\adrianarbizu\webapp\service\ProductoService.class
+TestJPA.class
+org\adrianarbizu\webapp\util\JpaUtil.class
+org\adrianarbizu\webapp\service\IProductoService.class
+org\adrianarbizu\webapp\model\Producto.class
